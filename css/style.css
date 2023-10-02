@@ -1,0 +1,316 @@
+/**
+* Theme Name: BONDI
+* Updated: Sep 21 2023 with Bootstrap v5.3.1
+* Author: Naim Zaaraoui
+* PSD Designer: -------
+*/
+
+/* GENERAL */
+:root {
+  --bn-dark: #19283f;
+  --bn-green: #00c7c0;
+  --bn-red: #ff3150;
+  --bn-yellow: #ffc400;
+  --bn-section-color: #eff7fa;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Poppins, sans-serif;
+  line-height: 1.7;
+}
+
+.bn-bg-dark {
+  background-color: var(--bn-dark) !important;
+}
+
+.bn-bg-green {
+  background-color: var(--bn-green);
+}
+
+.bn-bg-red {
+  background-color: var(--bn-red);
+}
+
+.bn-text-green {
+  color: var(--bn-green);
+}
+
+.bn-text-section {
+  color: var(--bn-section-color);
+}
+
+.bn-bg-section {
+  background-color: var(--bn-section-color);
+}
+
+/* COMPONENTS */
+.bn-btn {
+  padding: 0.675rem 1.35rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 0.925rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border-radius: 50rem;
+  background-color: var(--bn-red);
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.bn-btn:hover {
+  transform: translateY(-5px);
+}
+
+.bn-heading::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  width: 120px;
+  height: 2px;
+  background-color: var(--bn-green);
+  transform: translateX(-50%);
+}
+
+/* START NAVBAR */
+.navbar .navbar-nav .nav-link {
+  font-size: 0.9rem;
+}
+
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover {
+  color: var(--bn-green) !important;
+}
+
+.navbar .search {
+  border-left: 1px solid var(--bn-green);
+}
+/* END NAVBAR */
+
+/* START LANDING */
+.landing .landing-slider .owl-nav {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 1rem;
+  transform: translateY(-50%);
+}
+
+.landing-slider .owl-nav button.owl-next,
+.landing-slider .owl-nav button.owl-prev {
+  font-size: 5rem;
+  color: #fff;
+}
+
+.landing-slider .owl-nav button.owl-next {
+  margin-left: auto;
+}
+
+.landing-slider .owl-nav button:not(.disabled) {
+  color: var(--bn-green);
+}
+
+@media (max-width: 575px) {
+  .landing .landing-slider .owl-nav {
+    display: none;
+  }
+}
+
+.landing-slider .owl-dots {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.landing-slider .owl-dots .owl-dot span {
+  width: 15px;
+  height: 15px;
+  margin: 5px 7px;
+  background: #fff;
+  display: block;
+  transition: background-color 0.2s ease;
+  border-radius: 30px;
+}
+
+.landing-slider .owl-dots .owl-dot.active span,
+.landing-slider .owl-dots .owl-dot:hover span {
+  background-color: var(--bn-green);
+}
+
+.landing-slider .item-text {
+  background-color: rgb(0 0 0 / 50%);
+}
+/* END LANDING */
+
+/* START FEATURES */
+.features .icon-holder {
+  height: 200px;
+}
+
+.features .icon-holder .number {
+  font-size: 12rem;
+}
+/* END FEATRUES */
+/* START OUR WORK */
+.our-work ul li {
+  font-size: 0.925rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.our-work ul li.active {
+  background-color: var(--bn-red);
+  color: #fff;
+}
+
+.our-work ul li:not(.active):hover {
+  color: var(--bn-red);
+}
+
+.our-work .box {
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+
+.our-work .box.inactive {
+  transform: scale(0.7);
+}
+/* END OUR WORK */
+
+/* START STUFF*/
+.stuff .desc {
+  max-width: 500px;
+}
+/* END STUFF */
+
+/* START TEAM */
+.team .box .txt {
+  bottom: -100%;
+  transition: all 0.4s ease-in-out;
+}
+
+.team .box:hover .txt {
+  bottom: 0;
+}
+/* END TEAM */
+
+/* START BLOG */
+.blog .card-body span {
+  font-size: 0.875rem;
+}
+
+.blog .blog-slider .owl-nav {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 1rem;
+  transform: translateY(-50%);
+}
+
+.blog-slider .owl-nav button.owl-next span,
+.blog-slider .owl-nav button.owl-prev span{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.5rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  padding-bottom: 4px;
+  border-radius: 50%;
+  background-color: var(--bn-green);
+  color: #fff;
+}
+
+.blog-slider .owl-nav button.disabled {
+  opacity: 0.6;
+}
+
+.blog-slider .owl-dots {
+  position: absolute;
+  bottom: -2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.landing-slider .owl-dots .owl-dot.active span,
+.landing-slider .owl-dots .owl-dot:hover span {
+  background-color: var(--bn-green);
+}
+
+.blog .blog-slider .owl-dot span {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 5px;
+  background-color: var(--bn-green);
+  border-radius: 50%;
+  opacity: 0.4;
+  transition: all 0.3s ease;
+}
+
+.blog .blog-slider .owl-dot.active span,
+.blog .blog-slider .owl-dot:hover span {
+  transform: scale(1.1);
+  opacity: 1;
+}
+/* END BLOG */
+
+/* START SUBSCRIBE */
+.subscribe {
+  background-color: var(--bn-yellow);
+}
+
+.subscribe input[type="email"]::placeholder {
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.subscribe input[type="email"]:focus {
+  color: var(--bn-green) !important;
+  border-color: var(--bn-green) !important;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.subscribe input[type="email"]:focus::placeholder {
+  color: var(--bn-green);
+}
+/* END SUBSCRIBE */
+
+/* START FOOTER */
+footer {
+  font-size: 0.925rem;
+}
+
+footer li a {
+  transition: all 0.3s ease;
+}
+
+footer li a:hover {
+  text-decoration: underline !important;
+  color: #fff !important;
+}
+
+footer .contact li a {
+  width: 35px;
+  height: 35px;
+}
+/* END FOOTER */
